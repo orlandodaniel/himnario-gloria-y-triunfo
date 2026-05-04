@@ -1,17 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.tsx';
-import DetalleHimno from './pages/DetalleHimno.tsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.tsx";
+import DetalleHimno from "./pages/DetalleHimno.tsx";
+import Temas from "./pages/Temas.tsx"; // Asegúrate de importar tu nueva vista
+import { SettingsProvider } from "./context/SettingsContext";
 
 function App() {
   return (
-    <Router>
-      <div className="max-w-md mx-auto bg-white min-h-screen shadow-lg">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/himno/:id" element={<DetalleHimno />} />
-        </Routes>
-      </div>
-    </Router>
+    <SettingsProvider>
+      <BrowserRouter>
+        {/* El div contenedor debe envolver las rutas para aplicar el max-width en toda la app */}
+        <div className="max-w-md mx-auto min-h-screen shadow-lg relative">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/himno/:id" element={<DetalleHimno />} />
+            <Route path="/temas" element={<Temas />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </SettingsProvider>
   );
 }
 
