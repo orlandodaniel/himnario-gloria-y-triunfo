@@ -44,7 +44,7 @@ const Home = () => {
         h.numero.toString().includes(term) ||
         h.titulo.toLowerCase().includes(term) ||
         h.letra.toLowerCase().includes(term) ||
-        h.tags.some((t) => t.toLowerCase().includes(term))
+        h.tags.some((t: string) => t.toLowerCase().includes(term))
     );
   }, [busqueda, filtro, favoritos, recientes]);
 
@@ -130,7 +130,7 @@ const Home = () => {
                 </div>
 
                 {favoritos.includes(h.id) && (
-                  <Heart size={18} className="text-red-500 fill-red-500 ml-2" />
+                  <Heart size={18} className="text-red-400 fill-red-400 ml-2" />
                 )}
               </Link>
             ))}
