@@ -12,13 +12,15 @@ interface SettingsContextType {
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
 
 export const SettingsProvider = ({ children }: { children: React.ReactNode }) => {
-  const [tema, setTemaState] = useState<TemaType>('claro');
+  const [tema, setTemaState] = useState<TemaType | null>(null);
+  const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
     // Cargar preferencia guardada al iniciar la app
     const loadSettings = async () => {
       const { value } = await Preferences.get({ key: 'user_theme' });
-      if (value) setTemaState(value as TemaType);
+      setTemaState(value ? (value as TemaType) : 'claro');
+      setCargando(false);
     };
     loadSettings();
   }, []);
@@ -27,6 +29,10 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
     setTemaState(nuevoTema);
     await Preferences.set({ key: 'user_theme', value: nuevoTema });
   };
+
+  if (cargando || tema === null) {
+    return null;
+  }
 
   return (
     <SettingsContext.Provider value={{ tema, setTema }}>

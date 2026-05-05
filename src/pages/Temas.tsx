@@ -14,7 +14,7 @@ const Temas = () => {
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] transition-colors duration-300">
-      <header className="flex items-center p-6 gap-4 border-b border-gray-200 bg-[var(--bg-card)]">
+      <header className="flex items-center p-6 gap-4     border-gray-200 bg-[var(--bg-card)]">
         <button
           onClick={() => navigate(-1)}
           className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors text-[var(--text-main)]"

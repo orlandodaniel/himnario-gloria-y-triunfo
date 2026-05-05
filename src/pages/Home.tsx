@@ -73,10 +73,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--bg-primary)' }}>
-      <header className="bg-blue-700 pt-8 pb-6 px-6 rounded-b-[2.5rem] shadow-xl sticky top-0 z-30">
+      <header className="bg-blue-900 pt-8 pb-6 px-6 rounded-b-[2.5rem] shadow-xl sticky top-0 z-30">
         <div className="flex justify-between items-center mb-5">
           <h1 className="text-white text-2xl font-bold">
-            {filtro === "todos" && "Himnario de Gloria"}
+            {filtro === "todos" && "Himnario de Gloria y Triunfo"}
             {filtro === "favoritos" && "Mis Favoritos"}
             {filtro === "recientes" && "Recientes"}
           </h1>
