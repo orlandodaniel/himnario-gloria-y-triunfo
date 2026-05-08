@@ -3,7 +3,8 @@ import { App as CapacitorApp } from '@capacitor/app';
 import { useEffect } from 'react';
 import Home from "./pages/Home.tsx";
 import DetalleHimno from "./pages/DetalleHimno.tsx";
-import Temas from "./pages/Temas.tsx"; // Asegúrate de importar tu nueva vista
+import AcercaDe from "./pages/AcercaDe.tsx";
+import Temas from "./pages/Temas.tsx"; 
 import { SettingsProvider } from "./context/SettingsContext";
 
 function BackButtonHandler() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/himno/:id" element={<DetalleHimno />} />
             <Route path="/temas" element={<Temas />} />
+            <Route path="/acerca-de" element={<AcercaDe />} />
           </Routes>
         </div>
       </BrowserRouter>

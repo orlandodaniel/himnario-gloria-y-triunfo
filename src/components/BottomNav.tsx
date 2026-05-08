@@ -1,4 +1,4 @@
-import { Heart, Clock, Palette, BookOpen } from "lucide-react";
+import { Heart, Clock, Palette, BookOpen, Info } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface BottomNavProps {
@@ -65,6 +65,16 @@ const BottomNav = ({ filtroActivo, setFiltro }: BottomNavProps) => {
       >
         <Palette size={20} />
         <span className="text-[10px] mt-1 font-medium">Temas</span>
+      </button>
+
+      {/* Botón Temas (Navegación) */}
+      <button
+        onClick={() => navigate("/acerca-de")}
+        className="flex flex-col items-center w-full transition-colors"
+        style={estiloInactivo}
+      >
+        <Info size={20} />
+        <span className="text-[10px] mt-1 font-medium">Acerca De</span>
       </button>
     </nav>
   );
