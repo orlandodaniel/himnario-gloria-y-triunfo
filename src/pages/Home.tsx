@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { himnosGloriaYTriunfo } from "../data/himnos";
 import { useFavoritos } from "../hooks/useFavoritos";
-import { Search, Heart, ListFilter, Info } from "lucide-react";
+import { Search, Heart, ListFilter} from "lucide-react";
 import { useRecientes } from "../hooks/useRecientes";
 import BottomNav from "../components/BottomNav";
 
