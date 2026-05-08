@@ -36,7 +36,6 @@ export const SettingsProvider = ({ children }: { children: React.ReactNode }) =>
 
   return (
     <SettingsContext.Provider value={{ tema, setTema }}>
-      {/* Aplicamos la clase al contenedor principal */}
       <div className={`theme-${tema} min-h-screen transition-colors duration-300`}>
         {children}
       </div>

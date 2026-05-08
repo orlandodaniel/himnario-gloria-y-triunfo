@@ -34,7 +34,6 @@ function App() {
   return (
     <SettingsProvider>
       <BrowserRouter>
-        {/* Agregamos el manejador dentro del Router para que tenga acceso al contexto de navegación */}
         <BackButtonHandler />
         <div className="max-w-md mx-auto min-h-screen shadow-lg relative">
           <Routes>

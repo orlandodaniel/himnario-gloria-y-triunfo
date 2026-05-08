@@ -103,7 +103,6 @@ const DetalleHimno = () => {
       className="min-h-screen pb-20 transition-colors duration-300"
       style={{ backgroundColor: "var(--bg-primary)" }}
     >
-      {/* Barra de Navegación Superior */}
       <nav
         className="grid grid-cols-3 items-center p-4 border-b sticky top-0 backdrop-blur-md z-30 pt-10"
         style={{
@@ -210,26 +209,6 @@ const DetalleHimno = () => {
       >
         <Heart size={22} fill={esFavorito ? "currentColor" : "none"} />
       </button>
-
-      {/* <footer className="fixed bottom-0 left-0 right-0 p-4 flex justify-between items-center pointer-events-none">
-        <button
-          onClick={irAnterior}
-          disabled={idNumerico <= 1}
-          className="p-4 bg-[var(--bg-card)] shadow-lg rounded-2xl pointer-events-auto active:scale-90 transition-all disabled:opacity-30"
-          style={{ color: 'var(--text-main)' }}
-        >
-          <ArrowLeft size={24} />
-        </button>
-
-        <button
-          onClick={irSiguiente}
-          disabled={idNumerico >= 329}
-          className="p-4 bg-[var(--bg-card)] shadow-lg rounded-2xl pointer-events-auto active:scale-90 transition-all disabled:opacity-30"
-          style={{ color: 'var(--text-main)' }}
-        >
-          <ArrowRight size={24} /> 
-        </button>
-      </footer> */}
     </div>
   );
 };

@@ -6,7 +6,6 @@ const AcercaDe = () => {
 
   return (
     <div className="min-h-screen pb-10 transition-colors duration-300" style={{ backgroundColor: 'var(--bg-primary)' }}>
-      {/* Header */}
       <header className="bg-blue-700 pt-12 pb-8 px-6 rounded-b-[2.5rem] shadow-xl mb-6">
         <button 
           onClick={() => navigate(-1)}
@@ -19,7 +18,6 @@ const AcercaDe = () => {
       </header>
 
       <main className="px-6 space-y-6">
-        {/* Sección de la App */}
         <section className="p-6 rounded-3xl shadow-sm border border-transparent" style={{ backgroundColor: 'var(--bg-card)' }}>
           <div className="flex items-center gap-3 mb-4 text-blue-600">
             <Info size={24} />
@@ -38,7 +36,7 @@ const AcercaDe = () => {
           </div>
         </section>
 
-        {/* Sección del Desarrollador */}
+
         <section className="p-6 rounded-3xl shadow-sm border border-transparent" style={{ backgroundColor: 'var(--bg-card)' }}>
           <div className="flex items-center gap-3 mb-4 text-blue-600">
             <Code size={24} />
@@ -84,7 +82,7 @@ const AcercaDe = () => {
         </section>
 
         <footer className="text-center py-4 opacity-40 text-xs" style={{ color: 'var(--text-main)' }}>
-          Hecho con ❤️ para la comunidad cristiana.
+          Hecho con ❤️.
         </footer>
       </main>
     </div>
