@@ -21,7 +21,7 @@ const AcercaDe = () => {
         <section className="p-6 rounded-3xl shadow-sm border border-transparent" style={{ backgroundColor: 'var(--bg-card)' }}>
           <div className="flex items-center gap-3 mb-4 text-blue-600">
             <Info size={24} />
-            <h2 className="text-xl font-bold">Sobre la App</h2>
+            <h2 className="text-xl font-bold" style={{ color: 'var(--text-main)' }}>Sobre la App</h2>
           </div>
           <p className="leading-relaxed mb-4" style={{ color: 'var(--text-main)' }}>
             <strong>Himnario Gloria y Triunfo</strong> es una herramienta digital diseñada para facilitar el acceso a la música cristiana tradicional. 
@@ -40,7 +40,7 @@ const AcercaDe = () => {
         <section className="p-6 rounded-3xl shadow-sm border border-transparent" style={{ backgroundColor: 'var(--bg-card)' }}>
           <div className="flex items-center gap-3 mb-4 text-blue-600">
             <Code size={24} />
-            <h2 className="text-xl font-bold">Desarrollador</h2>
+            <h2 className="text-xl font-bold" style={{ color: 'var(--text-main)' }}>Desarrollador</h2>
           </div>
           
           <div className="mb-4">
