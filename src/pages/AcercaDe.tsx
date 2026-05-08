@@ -6,7 +6,7 @@ const AcercaDe = () => {
 
   return (
     <div className="min-h-screen pb-10 transition-colors duration-300" style={{ backgroundColor: 'var(--bg-primary)' }}>
-      <header className="bg-blue-700 pt-12 pb-8 px-6 rounded-b-[2.5rem] shadow-xl mb-6">
+      <header className="bg-blue-900 pt-12 pb-8 px-6 rounded-b-[2.5rem] shadow-xl mb-6">
         <button 
           onClick={() => navigate(-1)}
           className="mb-4 p-2 bg-white/20 rounded-full text-white active:scale-90 transition-transform"
