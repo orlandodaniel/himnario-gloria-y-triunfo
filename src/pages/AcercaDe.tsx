@@ -31,7 +31,9 @@ const AcercaDe = () => {
           </p>
           <div className="text-sm space-y-1" style={{ color: 'var(--text-muted)' }}>
             <p>• 329 Himnos incluidos</p>
-            <p>• Soporte Offline completo</p>
+            <p>• Busqueda Rapida (Número,Título,Letra)</p>
+            <p>• Soporte sin conexion completo</p>
+            <p>• Gestion de Favoritos e Historial</p>
             <p>• Personalización de lectura (Temas y Zoom)</p>
           </div>
         </section>
