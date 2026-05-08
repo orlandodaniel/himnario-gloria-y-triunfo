@@ -12,6 +12,7 @@ import {
 import { useSettings } from "../hooks/useSettings";
 import { useEffect } from "react";
 import { historyService } from "../services/historyService";
+import { Share } from '@capacitor/share';
 
 const DetalleHimno = () => {
   const { id } = useParams();
@@ -57,25 +58,17 @@ const DetalleHimno = () => {
 
   const compartirHimno = async () => {
     if (!himno) return;
-
-    const texto = `*${himno.numero}. ${himno.titulo}*\n\n${himno.letra}\n\n_Enviado desde Himnario Gloria y Triunfo_`;
-
+    
+    const textoCompartir = `*${himno.numero}. ${himno.titulo}*\n\n${himno.letra}\n\n_Enviado desde Himnario Gloria y Triunfo_`;
+    
     try {
-      if (navigator.share) {
-        await navigator.share({
-          title: `Himno ${himno.numero}: ${himno.titulo}`,
-          text: texto,
-        });
-      } else {
-        // Fallback para navegadores de escritorio que no soportan Web Share
-        await navigator.clipboard.writeText(texto);
-        alert("Copiado al portapapeles");
-      }
+      await Share.share({
+        title: `Himno ${himno.numero}: ${himno.titulo}`,
+        text: textoCompartir,
+        dialogTitle: 'Compartir himno con...',
+      });
     } catch (error) {
-      // Ignorar error si el usuario simplemente canceló la acción de compartir
-      if ((error as Error).name !== "AbortError") {
-        console.error("Error al compartir:", error);
-      }
+      console.log("Acción de compartir cancelada o fallida");
     }
   };
 
@@ -131,8 +124,8 @@ const DetalleHimno = () => {
         </div>
 
         <div className="flex justify-center text-center">
-          <p className="text-blue-600 font-black uppercase tracking-widest text-base leading-none">
-            Himno {himno.numero}
+          <p className="text-blue-500 font-black uppercase tracking-widest text-xl leading-none">
+            {himno.numero}
           </p>
         </div>
 
