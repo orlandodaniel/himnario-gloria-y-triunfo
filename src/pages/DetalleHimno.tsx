@@ -4,7 +4,6 @@ import { useFavoritos } from "../hooks/useFavoritos";
 import {
   Heart,
   ArrowLeft,
-  // ArrowRight,
   ZoomIn,
   ZoomOut,
   Share2,
@@ -89,14 +88,6 @@ const DetalleHimno = () => {
         style={{ backgroundColor: "var(--bg-primary)" }}
       ></div>
     );
-
-  // const irAnterior = () => {
-  //   if (idNumerico > 1) navigate(`/himno/${idNumerico - 1}`);
-  // };
-
-  // const irSiguiente = () => {
-  //   if (idNumerico < 329) navigate(`/himno/${idNumerico + 1}`);
-  // };
 
   return (
     <div

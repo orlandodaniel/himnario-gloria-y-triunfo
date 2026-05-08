@@ -13,11 +13,9 @@ function BackButtonHandler() {
 
   useEffect(() => {
     const backListener = CapacitorApp.addListener('backButton', ({ }) => {
-      // Si no estamos en la Home ("/"), volvemos atrás en el router
       if (location.pathname !== '/') {
         navigate(-1);
       } else {
-        // Si ya estamos en la Home, cerramos la aplicación
         CapacitorApp.exitApp();
       }
     });
